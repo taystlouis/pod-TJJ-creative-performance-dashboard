@@ -1,0 +1,116 @@
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.role-tabs {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.role-tab {
+  background: none;
+  border: 2px solid #ddd;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.role-tab:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.role-tab.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard thead {
+  background: #f9f9f9;
+  border-bottom: 2px solid #eee;
+}
+
+.leaderboard th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leaderboard td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.leaderboard tbody tr:hover {
+  background: #fafafa;
+}
+
+.leaderboard tbody tr.top-performer {
+  background: #f0f4ff;
+  border-left: 4px solid #667eea;
+}
+
+.rank {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 60px;
+}
+
+.name {
+  font-weight: 600;
+  color: #333;
+}
+
+.winners {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.emerging {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .role-tabs {
+    flex-wrap: wrap;
+  }
+
+  .leaderboard {
+    overflow-x: auto;
+  }
+
+  .leaderboard table {
+    font-size: 0.9rem;
+  }
+
+  .leaderboard th,
+  .leaderboard td {
+    padding: 0.75rem 0.5rem;
+  }
+}
