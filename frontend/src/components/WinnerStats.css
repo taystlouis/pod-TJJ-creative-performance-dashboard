@@ -1,0 +1,62 @@
+.winner-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.winners-list {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.winners-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.winners-list thead {
+  background: #f9f9f9;
+  border-bottom: 2px solid #eee;
+}
+
+.winners-list th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.winners-list td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.winner-row:hover {
+  background: #fafafa;
+}
+
+.winner-row.winner-true_winner {
+  border-left: 3px solid #28a745;
+}
+
+.winner-row.winner-emerging_winner {
+  border-left: 3px solid #ffc107;
+}
+
+@media (max-width: 768px) {
+  .winners-list {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .winners-list th,
+  .winners-list td {
+    padding: 0.75rem 0.5rem;
+  }
+}
