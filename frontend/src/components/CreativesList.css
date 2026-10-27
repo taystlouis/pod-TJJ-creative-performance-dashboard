@@ -1,0 +1,135 @@
+.creatives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sort-controls {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sort-controls label {
+  font-weight: 600;
+  color: #555;
+}
+
+.sort-controls select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.creatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.creative-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #667eea;
+  transition: all 0.3s;
+}
+
+.creative-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.creative-card.winner {
+  border-top-color: #28a745;
+  background: #fafcff;
+}
+
+.creative-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.creative-header h3 {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: monospace;
+  word-break: break-all;
+  flex: 1;
+}
+
+.winner-badge {
+  flex-shrink: 0;
+}
+
+.creative-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.detail {
+  text-align: center;
+}
+
+.detail .label {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.detail .value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.creative-meta {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.creative-meta p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.creative-meta strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .creatives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .creative-details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sort-controls {
+    flex-wrap: wrap;
+  }
+}
